@@ -34,10 +34,18 @@ public class Main {
 
 
             while (true){
-                System.out.println("Card on board:  "+ myDeck.dealCard());
+                Card display = myDeck.dealCard();
+                System.out.println("Card on board:  "+ display);
+                humanPlayer.displayHand();
+
+                System.out.println("What card do you want to play: ");
+
+                int playerPlay = input.nextInt();
+                Card me = humanPlayer.removeCard(playerPlay);
+                display.isAMatch(me);
 
 
-                input.nextInt();
+
         }
 
 

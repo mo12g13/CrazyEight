@@ -1,5 +1,7 @@
 package com.Momo;
 
+import java.util.ArrayList;
+
 /**
  * Created by Momo Johnson on 3/24/2016.
  */
@@ -33,5 +35,18 @@ public class Card {
     }
     public String toString(){
         return this.ranks[rank] +" of "+ this.suits[suit];
+    }
+
+    public boolean isAMatch (Card cardOnBoard){
+        if(this.suit ==cardOnBoard.getSuit() ||this.rank==cardOnBoard.getRank()) {
+            return true;
+        }
+
+        else if(cardOnBoard.getSuit() == 8 || cardOnBoard.rank==8){
+           return true;
+        }
+        else {
+            return false;
+        }
     }
 }

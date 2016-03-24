@@ -45,5 +45,10 @@ public class Hand {
         this.playerName = playerName;
     }
 
+    public Card removeCard(int removeCard){
+        Card cardOfCard = handOfPlayer.remove(removeCard);
+        return cardOfCard;
+    }
+
 
 }
