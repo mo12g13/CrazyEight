@@ -7,7 +7,7 @@ public class Card {
     protected int suit;
     protected int rank;
     protected String[] suits = { "Hearts", "Clubs", "Spades", "Diamonds"};
-    protected String[] ranks = {"Ace", "2", "3", "4", "5", "6", "8", "9", "10","Jack", "King", "Queen" };
+    protected String[] ranks = {"Ace", "2", "3", "4", "5", "6","7", "8", "9","10", "Jack", "Queen", "King" };
 
     public Card(int suit, int rank){
         this.rank = rank;
@@ -32,6 +32,6 @@ public class Card {
         this.rank = rank;
     }
     public String toString(){
-        return this.ranks[rank] +"of"+ this.suits[suit];
+        return this.ranks[rank] +" of "+ this.suits[suit];
     }
 }

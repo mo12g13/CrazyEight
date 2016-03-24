@@ -12,7 +12,7 @@ public class Deck {
         cards = new ArrayList<>();
 
         for(int a =0; a<4; a++){
-            for(int i =0; i<12; i++){
+            for(int i =0; i<13; i++){
                 cards.add(new Card(a, i));
             }
         }
@@ -23,14 +23,9 @@ public class Deck {
         return cards.remove(0);
     }
 
-    public int TotalCardsRemaining(){
+    public int cardsRemaining(){
         return cards.size();
     }
 
-    @Override
-    public String toString() {
-        return "Deck{" +
-                "cards=" + cards +
-                '}';
-    }
+
 }

@@ -7,16 +7,43 @@ import java.util.ArrayList;
  */
 public class Hand {
     ArrayList<Card>handOfPlayer;
+    String playerName;
     public Hand(){
+        handOfPlayer = new ArrayList<>();
 
     }
 
-    public ArrayList<Card> PlayerHand(){
-        for(int i =0; i<7; i++){
-            Deck myDeck = new Deck();
-            Card hand = myDeck.dealCard();
-            handOfPlayer.add(hand);
-        }
+    public ArrayList<Card> getHandOfPlayer() {
         return handOfPlayer;
     }
+
+    public void setHandOfPlayer(ArrayList<Card> handOfPlayer) {
+        this.handOfPlayer = handOfPlayer;
+    }
+
+
+    public ArrayList<Card>addCard(Card newCard){
+        handOfPlayer.add(newCard);
+        return handOfPlayer;
+
+    }
+
+    public void displayHand(){
+        for(int i =1; i<handOfPlayer.size(); i++){
+            System.out.println(i + ": "+ handOfPlayer.get(i));
+        }
+    }
+    public void displaySize(){
+        System.out.println(handOfPlayer.size());
+    }
+
+    public String getPlayerName() {
+        return "Welcome! "+ this.playerName;
+    }
+
+    public void setPlayerName(String playerName) {
+        this.playerName = playerName;
+    }
+
+
 }

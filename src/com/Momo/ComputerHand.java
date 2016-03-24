@@ -11,16 +11,6 @@ public class ComputerHand extends Hand {
     ComputerHand() {
 
 
-    }
-
-    public ArrayList<Card> handOfComputer() {
-        for (int i = 0; i < 7; i++) {
-            Deck myDeck = new Deck();
-            Card handComp = myDeck.dealCard();
-            computerHand.add(handComp);
-
-        }
-        return computerHand;
 
     }
 }
